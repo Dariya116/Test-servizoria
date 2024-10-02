@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Home, Login } from '../pages';
 import UserRegStore from '../store/user-login';
-import { ProtectedRoute } from './ProtectedRoute';
+import { ProtectedRoute } from './protected-route';
 import { Observer } from 'mobx-react-lite';
 
 export const AppRouter = () => {
