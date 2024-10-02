@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import style from './login.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { observer } from 'mobx-react-lite';
-import UserRegStore from '../../store/user';
+import UserRegStore from '../../store/user-login';
 import { Button } from '../../components/ui';
 import { Input } from '../../components/ui';
 
@@ -13,7 +13,6 @@ export interface FormValues {
 
 export const Login = observer(() => {
   const navigate = useNavigate();
-  //  const userStore = new UserStore();
   const formik = useFormik<FormValues>({
     initialValues: {
       email: '',
@@ -46,12 +45,12 @@ export const Login = observer(() => {
   return (
     <div className={style.form}>
       <Input
-        htmlFor="email"
-        labelText="Введите email"
-        id="email"
-        type="email"
-        name="email"
-        placeholder="email"
+        htmlFor='email'
+        labelText='Введите email'
+        id='email'
+        type='email'
+        name='email'
+        placeholder='email'
         formik={formik}
         formikValue={formik.values.email}
       />
@@ -60,12 +59,12 @@ export const Login = observer(() => {
         {formik.touched.email && formik.errors.email ? formik.errors.email : <span>&nbsp;</span>}
       </p>
       <Input
-        htmlFor="password"
-        labelText="Введите пароль"
-        id="password"
-        type="password"
-        name="password"
-        placeholder="password"
+        htmlFor='password'
+        labelText='Введите пароль'
+        id='password'
+        type='password'
+        name='password'
+        placeholder='password'
         formik={formik}
         formikValue={formik.values.password}
       />
@@ -77,8 +76,8 @@ export const Login = observer(() => {
         )}
       </p>
       <Button
-        type="submit"
-        text="Войти"
+        type='submit'
+        text='Войти'
         disabled={formik.isSubmitting || !formik.isValid}
         onClick={() => {
           formik.validateForm();

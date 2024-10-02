@@ -6,7 +6,7 @@ type PropsRoute = {
 
 export const ProtectedRoute = ({ isAllowed }: PropsRoute) => {
   if (!isAllowed) {
-    return <Navigate to="/login" />;
+    return <Navigate to='/login' replace/>;
   }
   return <Outlet />;
 };
