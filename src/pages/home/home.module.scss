@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2%;
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+    color: #1c1c1e;
+  }
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0.5px solid #1c1c1e;
+    border-radius: 4px;
+    padding: 10px 50px;
+    font-size: 24px;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: #efebeb;
+    }
+    &:active {
+      background-color: #a9a9a9;
+    }
+  }
+}
